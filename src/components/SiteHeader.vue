@@ -6,7 +6,6 @@ export default {
 
 <template>
     <header id="site-header">
-        header
         <div class="log">
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
@@ -24,4 +23,20 @@ export default {
         </nav>
     </header>
 </template>
+
+<style lang="scss">
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+
+    a {
+        color: black;
+        text-decoration: none;
+        margin-right: 1rem;
+        display: inline-block;
+    }
+}
+</style>
 
