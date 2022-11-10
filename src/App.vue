@@ -1,20 +1,19 @@
 <script>
 import SiteHeader from './components/SiteHeader.vue'
+import SiteMain from './components/SiteMain.vue'
+
 export default {
   name: 'Comics',
   components:{
-    SiteHeader
+    SiteHeader,
+    SiteMain
   }
 }
 </script>
 
 <template>
   <SiteHeader></SiteHeader>
- 
-
-  <main id="site-main">
-    main
-  </main>
+  <SiteMain></SiteMain>
 
   <footer id="site-footer">
     footer
