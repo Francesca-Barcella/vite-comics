@@ -15,9 +15,9 @@ export default {
   <SiteHeader></SiteHeader>
   <SiteMain></SiteMain>
 
-  <footer id="site-footer">
+ <!--  <footer id="site-footer">
     footer
-  </footer>
+  </footer> -->
 
 </template>
 

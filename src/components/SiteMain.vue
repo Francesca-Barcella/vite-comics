@@ -6,24 +6,44 @@ export default {
 
 <template>
     <main id="site-main">
-        <div class="container">
+        <div class="top">
             Content goes here
+        </div>
+        <div class="bottom">
+            <div class="row">
+                <div class="col">DIGITAL COMICS</div>
+                <div class="col">DC MERCHANDISER</div>
+                <div class="col">SUBSCRIPTION</div>
+                <div class="col">COMIC SHOP LOCATOR</div>
+                <div class="col">DC POWER VISA</div>
+            </div>
         </div>
     </main>
 </template>
 
 <style lang="scss">
 main {
-    height: 30vh;
     background-color: black;
     color: white;
 
-    .container {
+    .top {
         height: 30vh;
         max-width: 80%;
         margin: auto;
-        background-color: lightcoral;
         line-height: 30vh;
+    }
+
+    .bottom {
+        background-color: #0282F9;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: auto;
+        border: 1px solid white;
+        padding: 2rem;
     }
 
 }
