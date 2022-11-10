@@ -26,10 +26,15 @@ export default {
 
 <style lang="scss">
 header {
+    background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+
+    img{
+        max-width: 70px;
+    }
 
     a {
         color: black;
