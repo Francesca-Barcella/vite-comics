@@ -1,50 +1,44 @@
 <script>
+import MainBanner from './MainBanner.vue'
+
 export default {
-    name: 'SiteMain'
+    name: 'SiteMain',
+    components:{
+        MainBanner,
+    }
+
 }
 </script>
 
 <template>
     <main id="site-main">
-        <div class="top">
-            Content goes here
+        <div class="container top py-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cupiditate libero ullam et adipisci
+            necessitatibus, nihil architecto illo non, rem facere. Praesentium, debitis et. Tempora sit et ipsa
+            laudantium ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cupiditate libero ullam et
+            adipisci necessitatibus, nihil architecto illo non, rem facere. Praesentium, debitis et. Tempora sit et ipsa
+            laudantium ut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cupiditate libero ullam et
+            adipisci necessitatibus, nihil architecto illo non, rem facere. Praesentium, debitis et. Tempora sit et ipsa
+            laudantium ut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cupiditate libero ullam et
+            adipisci necessitatibus, nihil architecto illo non, rem facere. Praesentium, debitis et. Tempora sit et ipsa
+            laudantium ut.Tempora sit et ipsa laudantium ut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            cupiditate libero ullam et adipisci necessitatibus, nihil architecto illo non, rem facere. Praesentium,
+            debitis et. Tempora sit et ipsa laudantium ut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            cupiditate libero ullam et adipisci necessitatibus, nihil architecto illo non, rem facere. Praesentium,
+            debitis et. Tempora sit et ipsa laudantium ut.
         </div>
-        <div class="bottom">
-            <div class="row">
-                <div class="col">DIGITAL COMICS</div>
-                <div class="col">DC MERCHANDISER</div>
-                <div class="col">SUBSCRIPTION</div>
-                <div class="col">COMIC SHOP LOCATOR</div>
-                <div class="col">DC POWER VISA</div>
-            </div>
-        </div>
+        <!-- serve per richiamare il banner nell'altro components -->
+        <MainBanner />
+
     </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@use '../assets/scss/partials/_variables.scss' as *;
+
 main {
-    background-color: black;
-    color: white;
-
-    .top {
-        height: 30vh;
-        max-width: 80%;
-        margin: auto;
-        line-height: 30vh;
-    }
-
-    .bottom {
-        background-color: #0282F9;
-    }
-
-    .row {
-        display: flex;
-        justify-content: space-between;
-        max-width: 80%;
-        margin: auto;
-        border: 1px solid white;
-        padding: 2rem;
-    }
+    background-color: $dc_dark;
+    color: $dc_ligth;
 
 }
 </style>

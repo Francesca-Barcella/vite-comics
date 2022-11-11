@@ -54,7 +54,7 @@ export default {
 
 <template>
     <header id="site-header">
-        <div class="container d-flex p-2">
+        <div class="container d-flex py-2">
             <div class="logo">
                 <img src="../assets/img/dc-logo.png" alt="">
             </div>
