@@ -6,8 +6,8 @@ export default {
 
 <template>
     <footer id="site-footer">
-        <div class="container_top">
-            <div class="row">
+        <div class="container top py-2">
+            <div class="row d-flex">
                 <div class="col-2">
                     <h4>DC COMICS</h4>
                     <ul>
@@ -19,7 +19,7 @@ export default {
                         <li>link 6</li>
                         <li>link 7</li>
                     </ul>
-                    <h4 class="shop">SHOP</h4>
+                    <h3 class="shop">SHOP</h3>
                     <ul>
                         <li>link 1</li>
                         <li>link 2</li>
@@ -51,22 +51,17 @@ export default {
                         <li>link 5</li>
                     </ul>
                 </div>
-                <div class="col-6">
-                    <img src="../assets/img/dc-logo-bg.png" alt="">
-                </div>
             </div>
         </div>
-        <div class="container_bottom">
-            <div class="row">
-                <div class="col sx">
-                    <button> SING-UP NOW!</button>
-                </div>
-                <div class="col dx">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-pinterest"></i>
-                    <i class="fa-solid fa-location-dot"></i>
+        <div class="bottom py-4">
+            <div class="container bottom">
+                <div class="row">
+                    <div class="col sx">
+                        <button> SING-UP NOW!</button>
+                    </div>
+                    <div class="col dx">
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,57 +69,49 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../assets/scss/partials/_variables.scss' as *;
+
 footer {
     background-image: url('../assets/img/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    .container_top {
-        border: 1px solid red;
-        max-width: 80%;
-        margin: auto;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    .row {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .col-1 {
-        width: calc(100% / 12 * 1);
-    }
-
-    .col-6 {
-        width: calc(100% / 12 * 9);
-    }
-
-    h4 {
-        color: white;
-        padding-bottom: 0.75rem;
-    }
-
-    .shop {
-        padding-top: 0.75rem;
-    }
-
-    li {
-        color: #959595;
-        text-decoration: none;
-        list-style: none;
-
-    }
-
-    img {
-        max-width: 200px;
-    }
-
-    .container_bottom {
-        background-color: #797979;
+    .container.top {
+        background-image: url('../assets/img/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: right;
 
         .row {
-            max-width: 80%;
-            margin: auto;
+            justify-content: flex-start;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            h4,
+            .shop {
+                padding-bottom: 0.75rem;
+            }
+
+            .shop {
+                padding-top: 0.75rem;
+            }
+
+            li {
+                color: $dc_secondary_ligth;
+                text-decoration: none;
+                list-style: none;
+
+                &:hover {
+                    color: $dc_ligth;
+                    cursor: pointer;
+                }
+            }
+
         }
+
+    }
+
+    .bottom {
+        background-color: $dc_dark;
     }
 
 }
