@@ -31,7 +31,7 @@ export default {
 
 header {
     background-color: $dc_ligth;
-    
+
     .container {
         justify-content: space-between;
         align-items: center;
@@ -39,15 +39,23 @@ header {
 
     img {
         max-width: 70px;
-        margin: auto;
     }
 
     a {
         color: $dc_dark;
+        font-weight: 600;
         text-decoration: none;
         text-transform: uppercase;
         margin-left: 1rem;
         display: inline-block;
+        border-bottom: 4px solid $dc_ligth;
+        padding-bottom: 1rem;
+
+        &:hover {
+            color: $dc_primary;
+            border-bottom: 4px solid $dc_primary;
+            padding-bottom: 1rem;
+        }
     }
 }
 </style>
