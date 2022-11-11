@@ -5,7 +5,7 @@ import SiteFooter from './components/SiteFooter.vue'
 
 
 export default {
-  name: 'Comics',
+  name: 'App',
   components:{
     SiteHeader,
     SiteMain,

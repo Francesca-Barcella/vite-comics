@@ -1,0 +1,14 @@
+//importo bootstrap ../ sale di un livello ogni volta che scrivo ../
+@use '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@use './partials/_variables.scss' as *;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dc-dark;
+  color: $dc_ligth;
+}

@@ -6,11 +6,11 @@ export default {
 
 <template>
     <header id="site-header">
-        <div class="container">
-            <div class="log">
+        <div class="container d-flex p-2">
+            <div class="logo">
                 <img src="../assets/img/dc-logo.png" alt="">
             </div>
-            <nav>
+            <div class="menu">
                 <a href="#">link 1</a>
                 <a href="#">link 2</a>
                 <a href="#">link 3</a>
@@ -21,33 +21,31 @@ export default {
                 <a href="#">link 8</a>
                 <a href="#">link 9</a>
                 <a href="#">link 10</a>
-            </nav>
+            </div>
         </div>
     </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@use '../assets/scss/partials/_variables.scss' as *;
+
 header {
-    background-color: white;
+    background-color: $dc_ligth;
     
     .container {
-        border: 1px solid red;
-        max-width: 80%;
-        margin: auto;
-        display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
     }
 
     img {
         max-width: 70px;
+        margin: auto;
     }
 
     a {
-        color: black;
+        color: $dc_dark;
         text-decoration: none;
+        text-transform: uppercase;
         margin-left: 1rem;
         display: inline-block;
     }
