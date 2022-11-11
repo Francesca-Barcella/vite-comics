@@ -1,6 +1,54 @@
 <script>
 export default {
-    name: 'SiteHeader'
+    name: 'SiteHeader',
+    data (){
+        return {
+            menu: [
+                {
+                    text:'characters',
+                    href:'#'
+                },
+                {
+                    text:'comics',
+                    href:'#'
+                },
+                {
+                    text:'movies',
+                    href:'#'
+                },
+                {
+                    text:'tv',
+                    href:'#'
+                },
+                {
+                    text:'games',
+                    href:'#'
+                },
+
+                {
+                    text:'collectibles',
+                    href:'#'
+                },
+                {
+                    text:'videos',
+                    href:'#'
+                },
+                {
+                    text:'fans',
+                    href:'#'
+                },
+                {
+                    text:'news',
+                    href:'#'
+                },
+                {
+                    text:'shop',
+                    href:'#'
+                }
+            ]
+
+        }
+    }
 }
 </script>
 
@@ -11,16 +59,7 @@ export default {
                 <img src="../assets/img/dc-logo.png" alt="">
             </div>
             <div class="menu">
-                <a href="#">link 1</a>
-                <a href="#">link 2</a>
-                <a href="#">link 3</a>
-                <a href="#">link 4</a>
-                <a href="#">link 5</a>
-                <a href="#">link 6</a>
-                <a href="#">link 7</a>
-                <a href="#">link 8</a>
-                <a href="#">link 9</a>
-                <a href="#">link 10</a>
+                <a href="#" v-for="item in menu">{{item.text}}</a>
             </div>
         </div>
     </header>
