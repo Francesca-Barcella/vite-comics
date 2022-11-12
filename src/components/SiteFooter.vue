@@ -1,59 +1,19 @@
 <script>
+import FooterMenu from './FooterMenu.vue'
+
 export default {
-    name: 'SiteFooter'
+    name: 'SiteFooter',
+    components: {
+        FooterMenu,
+    }
 }
 </script>
 
 <template>
     <footer id="site-footer">
-        <div class="container top py-2">
-            <div class="row d-flex">
-                <div class="col-2">
-                    <h4>DC COMICS</h4>
-                    <ul>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 3</li>
-                        <li>link 4</li>
-                        <li>link 5</li>
-                        <li>link 6</li>
-                        <li>link 7</li>
-                    </ul>
-                    <h3 class="shop">SHOP</h3>
-                    <ul>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                    </ul>
-                </div>
-                <div class="col-2">
-                    <h4>DC</h4>
-                    <ul>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 3</li>
-                        <li>link 4</li>
-                        <li>link 5</li>
-                        <li>link 6</li>
-                        <li>link 7</li>
-                        <li>link 8</li>
-                        <li>link 9</li>
-                        <li>link 10</li>
-                        <li>link 11</li>
-                    </ul>
-                </div>
-                <div class="col-2">
-                    <h4>SITES</h4>
-                    <ul>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 3</li>
-                        <li>link 4</li>
-                        <li>link 5</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="bottom py-4">
+        <FooterMenu />
+        
+        <div class="footer_bottom py-4">
             <div class="container bottom d-flex">
                 <div class="cta p-2">
                     <a href="#" class="btn">SIGN-UP NOW!</a>
@@ -113,7 +73,7 @@ footer {
 
     }
 
-    .bottom {
+    .footer_bottom {
         background-color: $dc_dark;
     }
 
@@ -128,16 +88,17 @@ footer {
                 text-decoration: none;
             }
         }
-        
-        .social{
+
+        .social {
             justify-content: space-evenly;
             align-items: center;
             text-transform: uppercase;
         }
 
-        img{
+        img {
             padding-left: 1rem;
-            &:hover{
+
+            &:hover {
                 cursor: pointer;
             }
         }
