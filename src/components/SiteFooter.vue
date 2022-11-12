@@ -3,8 +3,36 @@ import FooterMenu from './FooterMenu.vue'
 
 export default {
     name: 'SiteFooter',
+
     components: {
         FooterMenu,
+    },
+
+    data(){
+        return{
+            social:[
+                {
+                    url:'footer-facebook.png',
+                },
+                {
+                    url:'footer-periscope.png',
+                },
+                {
+                    url:'footer-pinterest.png',
+                },
+                {
+                    url:'footer-twitter.png',
+                },
+                {
+                    url:'footer-youtube.png',
+                },
+            ]
+        }
+    },
+    methods: {
+        getImageUrl(name) {
+            return new URL(`../assets/img/${name}`, import.meta.url).href
+        }
     }
 }
 </script>
@@ -20,11 +48,9 @@ export default {
                 </div>
                 <div class="social d-flex">
                     <p>Follow us</p>
-                    <img src="../assets/img/footer-facebook.png" alt="">
-                    <img src="../assets/img/footer-periscope.png" alt="">
-                    <img src="../assets/img/footer-pinterest.png" alt="">
-                    <img src="../assets/img/footer-twitter.png" alt="">
-                    <img src="../assets/img/footer-youtube.png" alt="">
+                    <div v-for="item in social">
+                        <img :src="getImageUrl(item.url)" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,9 +94,7 @@ footer {
                     cursor: pointer;
                 }
             }
-
         }
-
     }
 
     .footer_bottom {
@@ -90,9 +114,12 @@ footer {
         }
 
         .social {
-            justify-content: space-evenly;
+            justify-content: space-bet;
             align-items: center;
             text-transform: uppercase;
+        }
+        p:hover{
+            cursor: pointer;
         }
 
         img {
