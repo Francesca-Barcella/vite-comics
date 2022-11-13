@@ -1,8 +1,12 @@
 <script>
 import comics from '../data/dc-comics'
+import ComicsCard from './MainComicsCard.vue'
 
 export default {
     name: 'MainComicsCards',
+    components: {
+        ComicsCard
+    },
     data() {
         return {
             ComicsCards: comics
@@ -18,11 +22,12 @@ export default {
 
    <div class="container py-5">
             <div class="cards row">
-                <div class="card col-2" v-for="item in ComicsCards">
+                <Comicscards  v-for="item in ComicsCards" :image="item.thumb" :title="item.series"/>
+                <!-- <div class="card col-2" v-for="item in ComicsCards">
                     <img :src="item.thumb"
                         alt="">
                     <h3>{{item.series}}</h3>
-                </div>
+                </div> -->
             </div>
         </div>
 </template>

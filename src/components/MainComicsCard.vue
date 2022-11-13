@@ -1,8 +1,10 @@
 <script>
-import comics from '../data/dc-comics'
-
 export default {
-    name: 'Card'
+    name: 'Card',
+    props: {
+        image: String,
+        title: String
+    }
 }
 </script>
 
@@ -11,10 +13,10 @@ export default {
 
    <div class="container py-5">
             <div class="cards row">
-                <div class="card col-2" v-for="item in ComicsCards">
-                    <img :src="item.thumb"
-                        alt="">
-                    <h3>{{item.series}}</h3>
+                <div class="card col-2">
+                    <img :src="image"
+                        :alt="title">
+                    <h3>{{title}}</h3>
                 </div>
             </div>
         </div>
