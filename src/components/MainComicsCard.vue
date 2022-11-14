@@ -1,9 +1,9 @@
 <script>
 export default {
-    name: 'Card',
-    props: {
-        image: String,
-        title: String
+    name: 'MainComicsCard',
+    props: { /* ok */
+        image: String, /* ok */
+        title: String /* ok */
     }
 }
 </script>
@@ -14,9 +14,9 @@ export default {
    <div class="container py-5">
             <div class="cards row">
                 <div class="card col-2">
-                    <img :src="image"
-                        :alt="title">
-                    <h3>{{title}}</h3>
+                    <img :src="image" 
+                        :alt="title"> <!-- ok -->
+                    <h3>{{title}}</h3> <!-- ok -->
                 </div>
             </div>
         </div>

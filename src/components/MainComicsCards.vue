@@ -1,15 +1,18 @@
+<!-- Products per fabio -->
+
 <script>
-import comics from '../data/dc-comics'
-import ComicsCard from './MainComicsCard.vue'
+import ComicsList from '../data/dc-comics.js' /* ok */
+import ComicsCard from '../components/MainComicsCard.vue'
 
 export default {
-    name: 'MainComicsCards',
+    name: 'MainComicsCards', /* ok */
     components: {
-        ComicsCard
+        ComicsList,
+        ComicsCard /* ok */
     },
     data() {
         return {
-            ComicsCards: comics
+           cards: ComicsList /* ok */
                 
         }
     }
@@ -22,11 +25,11 @@ export default {
 
    <div class="container py-5">
             <div class="cards row">
-                <Comicscards  v-for="item in ComicsCards" :image="item.thumb" :title="item.series"/>
-                <!-- <div class="card col-2" v-for="item in ComicsCards">
-                    <img :src="item.thumb"
+                <ComicsCard  v-for="item in cards" :image="item.thumb" :title="item.series"/> <!-- c'era una c minuscola invece di maiuscola!! cribbio -->
+                <!-- <div class="card col-2" v-for="item in cards"> --ok con cards--
+                    <img :src="item.thumb" --ok con thumb--
                         alt="">
-                    <h3>{{item.series}}</h3>
+                    <h3>{{item.series}}</h3> - ok con series--
                 </div> -->
             </div>
         </div>

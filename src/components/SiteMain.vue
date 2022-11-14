@@ -1,12 +1,12 @@
 <script>
 import MainBanner from './MainBanner.vue'
-import ComicsCards from './MainComicsCards.vue'
+import MainComicsCards from './MainComicsCards.vue' /* ok */
 
 export default {
     name: 'SiteMain',
     components: {
-        MainBanner,
-        ComicsCards
+        MainComicsCards,  /* ok */
+        MainBanner
     }
 
 }
@@ -14,7 +14,7 @@ export default {
 
 <template>
     <main id="site-main">
-        <ComicsCards />
+        <MainComicsCards /> <!-- Products per fabio -->
         <!-- <div class="container py-5">
             <div class="cards row">
                 <div class="card col-2">
