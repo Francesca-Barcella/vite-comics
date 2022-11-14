@@ -9,14 +9,12 @@ export default {
 </script>
 
 <template>
-    <div class="container py-5">
-        <div class="row cards">
+    
             <div class="card col-2">
                 <img :src="image" :alt="title"> <!-- ok -->
                 <h3>{{ title }}</h3> <!-- ok -->
             </div>
-        </div>
-    </div>
+
 </template>
 
 <style lang="scss" scoped>
