@@ -19,7 +19,7 @@ export default {
 
 <template>
     <div class="commics">
-        <div class="container">
+        <div class="container py-5">
             <div class="row">
                 <ComicsCard v-for="item in cards" :image="item.thumb" :title="item.series" />
     <!-- c'era una c minuscola invece di maiuscola!! cribbio -->

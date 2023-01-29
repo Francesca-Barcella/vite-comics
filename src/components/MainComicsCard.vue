@@ -10,7 +10,7 @@ export default {
 
 <template>
     
-            <div class="card col-2">
+            <div class="card col-2 py-3">
                 <img :src="image" :alt="title"> <!-- ok -->
                 <h3>{{ title }}</h3> <!-- ok -->
             </div>
